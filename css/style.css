@@ -1,0 +1,635 @@
+/* global roulse*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(0, 0%, 98%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 14px;
+}
+
+p {
+    color: var(--Grayish-Blue);
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Start Header Mobile */
+
+
+header {
+    display: flex;
+    height: 12vh;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: var(--Light-Grayish-Blue);
+    position: fixed;
+}
+
+.head {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+    height: 12vh;
+    
+}
+
+.links {
+    display: none;
+    background-color: var(--Dark-Blue);
+    z-index: 10;
+    width: 100vw;
+    height: 300px;
+    padding-top: 5vh;
+    padding-right: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    
+}
+
+.links li {
+    padding: 10px;
+    
+}
+.links li a{
+    color: var(--Light-Grayish-Blue);
+}
+
+.btn{
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    padding: 4px 20px;
+    border-radius: 15px;
+    margin-right: 28vw;
+}
+
+.show-links {
+    display: block;
+}
+
+.logo {
+    width: 90px;
+}
+
+/* Start Header desktop */
+@media (min-width:800px) {
+    header {
+        width: 100%;
+    }
+    .head .togle {
+       display: none;
+    }
+    .head {
+        width: 30%;
+    }
+    .links {
+        display: flex;
+        width: 60%;
+        padding: 0;
+        justify-content: end;
+        height: 100%;
+        align-items: center;
+        background-color: transparent;
+        z-index: 1;
+        background-image: none;
+    }
+
+    .links li {
+        margin-left: 20px;
+    }
+
+    .links li a{
+        color: var(--Dark-Blue);
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .btn {
+        margin-right: 0;
+        padding: 6px 12px;
+    }
+}
+
+/* Start Header Mobile */
+
+.intro {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.intro .img {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.intro img {
+    width: 90%;
+}
+
+.intro .text {
+    
+}
+
+.intro .text h1 {
+    margin-bottom: 30px;
+}
+
+.intro .text p {
+    
+}
+
+
+.intro .booking_btn {
+    margin-top: 30px;
+}
+
+.booking_btn a {
+    padding: 6px 40px;
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    color: var(--White);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Start Intro desktop */
+@media (min-width:800px) {
+    .intro {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+    }
+    
+    .intro .img {
+        margin-top: 10vh;
+        order: 2;
+        width: 50%;
+    }
+    
+    .intro img {
+        width: 90%;
+    }
+    
+    .intro .text {
+        margin-top: 10vh;
+        text-align: right;
+        width: 50%;
+    }
+    
+    .intro .text h1 {
+        font-size: 36px;
+        width: 70%;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .intro .text p {
+        width: 80%;
+    }
+    
+    
+    .intro .booking_btn {
+        margin-top: 30px;
+    }
+    
+    .booking_btn a {
+        padding: 6px 50px;
+        background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+        color: var(--White);
+        border-radius: 15px;
+    }
+
+}
+
+/* Start Booking mobile */
+
+.booking {
+    padding:100px 0;
+    text-align: center;
+}
+
+#boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+#boxes ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+}
+
+#boxes ul li {
+    transition: 0.4s;
+    cursor: pointer;
+    width: 45%;
+    height: 50px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#boxes ul .active {
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    color: var(--White);
+}
+
+.box {
+    width: 90%;
+    height: 600px;
+}
+
+.box > div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+.one h3 {
+    margin-bottom: 30px;
+}
+
+.one .row {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.row i {
+    font-size: 16px;
+    margin-left: 15px;
+    color: #999;
+}
+
+.row input , textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+::placeholder { 
+    color: #999;
+    font-size: 16px; 
+}
+.one .textarea {
+    padding-top: 15px;
+    height: 100px;
+    align-items: flex-start;
+}
+
+.one button , .two button {
+    padding: 10px 50px;
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    color: var(--White);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+.two i {
+    margin-top: 50px;
+    font-size: 200px;
+    color: rgb(44, 44, 226);
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.two a {
+    color: var(--White);
+}
+
+.box > div:not(:first-child) {
+    display: none;
+}
+
+@media (min-width:767px) {
+    #boxes ul {
+        padding: 0;
+        width: 50%;
+    
+    }
+    
+    #boxes ul li {
+        width: 50%;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+}
+
+/* Start Serves mobile */
+
+.serves {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color:var(--Light-Grayish-Blue);
+}
+
+.serves .text {
+    margin-bottom: 50px;
+}
+
+.workFlow {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Start Serves desktop */
+
+@media (min-width:767px) {
+    .serves {
+        padding: 100px 7vw;
+    }
+
+    .work {
+        display: flex;
+    }
+    .workFlow p {
+        margin:0;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .workFlow h3 {
+        margin-bottom:10px ;
+    }
+}
+
+/* Start About mobile */
+
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.about .imges {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    
+}
+
+.about .imges img{
+    width: 100%;
+    
+}
+
+/* Start About desktop */
+@media (min-width:800px) {
+    .about {
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about .text {
+        flex-basis: 48%;
+    }
+
+    .about .text h2{
+        margin-bottom: 30px;
+    }
+    .about .text p{
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    
+    .about .imges {
+        flex-basis: 48%; 
+    }
+}
+/* Start footer mobile */
+
+footer {
+    text-align: center;
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Grayish-Blue);
+    padding: 30px 0 10px 0;
+}
+
+footer ul {
+    padding: 15px;
+    list-style: none;
+}
+
+footer li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.soshil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.soshil img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer .line {
+    height: 2px;
+    width: 90vw;
+    background-color: #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Start footer desktop */
+@media (min-width:800px) {
+    footer {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: right;
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+
+/* Log in page style */
+
+.login-input {
+    width: 320px;
+    box-shadow: 0 0 16px #ddd;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.container input[type=checkbox] {
+    width: 10px;
+    border-radius: 10px;
+}
+
+.container button {
+    background-image: linear-gradient(to right,var(--Lime-Green),var(--Bright-Cyan));
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+.container-b {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* dis page style */
+
+.main-dis {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.main-dis aside {
+    background-color:var(--Dark-Blue);
+    height: 100%;
+    color: var(--White);
+    flex-basis: 25%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+aside h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    text-align: right;
+}
+
+aside ul {
+    text-align: right;
+    padding-right: 50px;
+}
+
+aside ul li {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}

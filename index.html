@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- CSS only -->
+    <title>doctor</title>
+</head>
+<body dir="rtl">
+    <!-- Start Header -->
+    <header>
+        <div class="head">
+            <img class="logo" src="img/logo.svg" alt="logo">
+            <div class="togle">
+                <img src="img/icon-hamburger.svg" alt="hamburger" id="hamburger">
+            </div>
+        </div>
+        <ul class="links">
+            <li><a href="#intro">الرئسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#serves">خدماتنا</a></li>
+            <li><a >الحجوزات</a></li>
+            <li><a class="btn" href="login.html" style="color:#fff;">تسجيل الدخول</a></li>
+        </ul>
+    </header>
+    <main>
+
+    <!-- Start Intro -->
+        <section class="intro" id="intro">
+            <div class="img">
+                <img src="img/Medical prescription-bro.png" alt="illustration">
+            </div>
+            <div class="text">
+                <h1> الشفاء العاجل انشاء الله لجميع المرضى</h1>
+                <p>تعتبر عيادنا واحد من ابر العيادات في العراق عموما ومحافظة النجف خصوصا حيث نقدم العديد من الخدمات للمرضا من ضمنها تقديم خدمات استشارية للمرضا وعمليات جراحية دقيقة </p>
+                <div class="booking_btn">
+                    <a href="#book">احجز الان</a>
+                </div>
+            </div>
+        </section>
+        <!-- Start Booking -->
+        <section class="booking" id="booking">
+            <div class="title">
+                <h2 id="book">احجز الان</h2>
+                <div class="line"></div>
+            </div>
+            <div id="boxes">
+                    <ul>
+                        <li class="active" data-cont=".one">حجز في العيادة</li>
+                        <li data-cont=".two">حجز معاية فيديو</li>
+                    </ul>
+                    <div class="box">
+                        <div class="one">
+                            <form >
+                                <h3 >ارسال الحجز</h3>
+                                <div class="row">
+                                    <i class="fal fa-user"></i>
+                                    <input id="esteftaName" type="text" placeholder="الإسم">
+                                </div>
+                                <div class="row">
+                                    <i class="fal fa-envelope-open"></i>
+                                    <input  type="text" placeholder="البريد الإلكتروني">
+                                </div>
+                                <div class="row">
+                                    <i class="fal fa-circle" aria-hidden="true"></i>
+                                    <input  type="text" placeholder="العمر">
+                                </div>
+                                <div class="row " >
+                                    <i class="fal fa-person-sign" aria-hidden="true"></i>
+                                    <input type="text"  placeholder="الجنس">
+                                </div>
+                                <div class="row ">
+                                    <i class="fal fa-building" aria-hidden="true"></i>
+                                    <input  type="text" placeholder="المدينة"></div>
+                                <div class="row ">
+                                    <i class="fal fa-edit" aria-hidden="true"></i>
+                                    <input  type="text" placeholder="الموضوع"></div>
+                                <div class="row textarea">
+                                    <i class="fal fa-sticky-note" aria-hidden="true"></i>
+                                    <textarea type="text" placeholder="نص السؤال" ></textarea>
+                                </div>
+                                <div >
+                                    <button >إرسال الحجز</button>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="two">
+                        <h3 > حجز مكالمة فيديو </h3>
+                        
+                        <div>
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <button><a href="https://zoom.us/">احجز الان</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start Serves -->
+        <section class="serves" id="serves">
+            <div class="text">
+                <h2 class="titel">
+                    الخدمات المقدمة
+                </h2>
+                <p class="title-prag">تقدم عيادنا العديد من الخدمات المميزة للمرضى </p>
+                </div>
+                <div class="work">
+                <div class="workFlow">
+                    <img src="img/icon-blacklist.svg" alt="text">
+                    <h3>معاينة دورية</h3>
+                    <p>متابعات دورية لمرضانا من خلال التواصل مع المرضي وروية الاستجابة اللعلاجات المقدمة من قبلنا</p>
+                </div>
+                <div class="workFlow">
+                    <img src="img/icon-text.svg" alt="">
+                    <h3>سجلات للمرضى</h3>
+                    <p>اي مريض يتم معالجة في عيادنا نحفظ له معلومات الكترونيا من ضمنها اي امراض مزمنة يعاني منها المرض</p>
+                </div>
+                <div class="workFlow">
+                    <img src="img/icon-preview.svg" alt="">
+                    <h3>وصفات الكترونية</h3>
+                    <p>تتميز عيادنا بتقديم وصفات الكترونية والاحتفاظ بنسخ منها الكترونية وذاللك لتقليل نسبةالخطأ في الوصفات اليدوية</p>
+                </div>
+                </div>
+        </section>
+        <section class="about" id="about">
+            <div class="text">
+                <h2>من نحن</h2>
+                <p>ان الدكتبرو <strong>محمد حسين حمدي</strong> بور في الطب البشري حاصل على الزمالة الاوربية من جامعة ستانفرو لدي العدية من البحوث المنشورة في المجالات العالمية وكذالك اعمل تدريس في جامعة بغداد</p>
+                <p>اختصاد امراض الجملة العصبية وامراض العمود الفقري المزمنة وكذالك اورام الدماخ بصنفيها الحميدة والاورام الخبية نقوم بمعالجة المرضى بلاساليب الحجييثة من ضمنها العلاج بلاشعاع</p>
+            </div>
+            <div class="imges">
+                <img src="img/confident-doctor-nurse-with-clipboard-hand-showing-okay-gesture.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!-- Start footer -->
+    <footer>
+        <div class="one-1 flex">
+            <img class="logo" src="img/logo.svg" alt="logo">
+            <div class="soshil">
+                <img src="img/icon-facebook.svg" alt="facebook">
+                <img src="img/icon-twitter.svg" alt="twitter">
+                <img src="img/icon-pinterest.svg" alt="pinterest">
+                <img src="img/icon-instagram.svg" alt="instagram">
+        </div>
+        </div>
+        <div class="line"></div>
+        <div class="two-2 flex">
+            <div class="box-1">
+                <ul>
+                    <li>عيادنا</li>
+                    <li>خدماتنا</li>
+                    <li>خططنا</li>
+                    <li> رويتنا</li>
+                </ul>
+            </div>
+        <div class="box-2">
+            <ul>
+                <li>اسأل</li>
+                <li>شروطنا</li>
+                <li>سياسة الخصوصية</li>
+                <li> الرئسية</li>
+            </ul>
+        </div>
+        <div class="box-3">
+            <ul>
+                <li>تواصل معنا</li>
+                <li>المبيعات</li>
+                <li>الدعم</li>
+                <li>محادثات مباشرة</li>
+            </ul>
+        </div>
+        <div class="box-4">
+            <ul>
+                <li>اخرى</li>
+                <li>المهنية</li>
+                <li>اضغط</li>
+                <li>الرخص</li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
